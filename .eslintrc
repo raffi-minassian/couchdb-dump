@@ -1,0 +1,14 @@
+{
+  "env": {
+    "node": true
+  },
+  "rules":{
+    "no-trailing-spaces": 0,
+    "quotes": 0,
+    "no-use-before-define": 0,
+    "strict": 0,
+    "consistent-return": 0,
+    "camelcase": 0,
+    "no-underscore-dangle": 0
+  }
+}
