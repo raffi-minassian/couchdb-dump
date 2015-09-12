@@ -1,6 +1,6 @@
 {
   "name": "couchdb-dump",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Same basic concept as mysqldump, but for CouchDB",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
   "license": "Apache-2.0",
