@@ -1,6 +1,6 @@
 {
   "name": "couchdb-dump",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Same basic concept as mysqldump, but for CouchDB",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
   "license": "Apache-2.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/raffi-minassian/couchdb-dump.git"
+    "url": "https://github.com/raffi-minassian/couchdb-dump.git"
   },
   "main": "./lib/couchdbdump.js",
   "scripts": {
