@@ -8,6 +8,10 @@
     "cdbdump": "./bin/cdbdump",
     "cdbload": "./bin/cdbload"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/raffi-minassian/couchdb-dump.git"
+  },
   "main": "./lib/couchdbdump.js",
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1"
