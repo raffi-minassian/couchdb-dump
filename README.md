@@ -86,3 +86,11 @@ If you don't need the streams and/or pipes, you should definitely check out thes
 I had to get this going quick and dirty at the moment so currently authentication is not supported. Unless your CouchDB is in *Admin Party* mode, this tool isnt going to help you. :(  
 
 I also dont have tests in place. Will be working on both of these things over the next few weeks.
+
+## Contributing
+
+Fork and PR. Thanks!!
+
+## Release History
+
+* 1.0.0 Initial release
