@@ -1,9 +1,9 @@
 {
-  "name": "couchdbdump",
+  "name": "couchdb-dump",
   "version": "1.0.0",
   "description": "Same basic concept as mysqldump, but for CouchDB",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bin": {
     "cdbdump": "./bin/cdbdump",
     "cdbload": "./bin/cdbload"
@@ -15,6 +15,7 @@
   "keywords": [
     "couchdb",
     "backup",
+    "database",
     "dump",
     "mysqldump"
   ],
@@ -23,8 +24,5 @@
     "minimist": "1.x.x",
     "request": "2.x.x",
     "through": "2.x.x"
-  },
-  "engines": {
-    "node": ">=0.10"
   }
 }
