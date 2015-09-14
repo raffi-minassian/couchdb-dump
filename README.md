@@ -43,11 +43,13 @@ You can even do this ...
 
 ## Full Usage
 
-If you execute the `cdbdump` or `cdbload` commands with no arguments, the following usage information will be printed on the console and the command will exit.
+If you execute the `cdbdump` or `cdbload` commands with no arguments or with --help, the following usage information will be printed on the console and the command will exit.
 
-`usage: cdbdump [-h host] [-P port] [-r protocol] [-s json-stringify-space] [-k dont-strip-revs] -d database`
+`usage: cdbdump [-u username] [-p password] [-h host] [-P port] [-r protocol] [-s json-stringify-space] [-k dont-strip-revs] -d database`
 
-`usage: cdbload [-h host] [-P port] [-r protocol] [-v verbose] -d database`
+`usage: cdbload [-u username] [-p password] [-h host] [-P port] [-r protocol] [-v verbose] -d database`
+
+The username and password, if supplied, will be used for authentication via [Basic Auth (RFC2617)](http://docs.couchdb.org/en/1.6.1/api/server/authn.html#api-auth-basic). Currently this is the only supported authentication method.
 
 The **-s** paramater for `cdbdump` is used as the third paramater to JSON.stringify() for the amount of white space to use if you want the output to be pretty-printed.
 
@@ -72,20 +74,16 @@ By default, the `_rev` element of every document in the database is stripped out
     verbose = false
 
 ## Why Another CouchDB Dump Command?
-I wrote this because I couldn't find a cli dump tool for CouchDB that used streams and allowed me to pipe output easily. If you know of one, I'd still like to take a look at it so please [let me know on twitter](https://twitter.com/RaffiMinassian).
-
-If you don't need the streams and/or pipes, you should definitely check out these other excellent options:
+I wrote this because I couldn't find a cli dump tool for CouchDB that allowed me to pipe output directly. Since then I also found these other excellent options which you should definitely check out as well:
 
 - [danielebailo/couchdb-dump](https://github.com/danielebailo/couchdb-dump)
 - [pouchdb-dump-cli](https://www.npmjs.com/package/pouchdb-dump-cli)
 - [pouchdb-load](https://www.npmjs.com/package/pouchdb-load)
 
 
-## Warning! Major Feature Missing!!
+## Testing
 
-I had to get this going quick and dirty at the moment so currently authentication is not supported. Unless your CouchDB is in *Admin Party* mode, this tool isnt going to help you. :(  
-
-I also dont have tests in place. Will be working on both of these things over the next few weeks.
+I had to get this going quick and dirty at the moment so there are no automated tests in place yet.
 
 ## Contributing
 
