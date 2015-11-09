@@ -1,9 +1,12 @@
 {
   "name": "couchdb-dump",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Same basic concept as mysqldump, but for CouchDB",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
   "license": "Apache-2.0",
+  "engines" : {
+    "node" : ">=4.2.2" 
+  },
   "bin": {
     "cdbdump": "./bin/cdbdump",
     "cdbload": "./bin/cdbload"
@@ -27,6 +30,6 @@
     "jsonparse": "1.x.x",
     "minimist": "1.x.x",
     "request": "2.x.x",
-    "through": "2.x.x"
+    "through2": "2.x.x"
   }
 }

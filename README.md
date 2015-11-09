@@ -8,7 +8,7 @@ Reading and writing the data is done via stdin and stdout, respectively. The out
 Internally this is just calling on CouchDB's [**_all_docs**](http://docs.couchdb.org/en/1.6.1/api/database/bulk-api.html#) and [**_bulk_docs**](http://docs.couchdb.org/en/1.6.1/api/database/bulk-api.html#post--db-_bulk_docs) endpoints. To do what it does, this package just glues together the power of Node.js streams and the following modules...
 
 - [request](https://github.com/request/request)
-- [through](https://github.com/dominictarr/through)
+- [through2](https://github.com/rvagg/through2)
 - [jsonparse](https://github.com/creationix/jsonparse)
 - [minimist](https://github.com/substack/minimist)
 
@@ -16,7 +16,7 @@ Many thanks to the authors of those amazing packages for making this possible.
 
 ## Installation
 
-`npm install couchdb-dump -g`
+`npm install -g couchdb-dump`
 
 ## Usage Examples
 
@@ -97,6 +97,7 @@ Fork and PR. Thanks!!
 
 ## Release History
 
+* 2.0.0 Using latest through2 package instead of through.
 * 1.2.0 Support for dumping only docs which belong to a specified CouchDB design doc and view.
 * 1.1.0 Added Authentication options
 * 1.0.0 Initial release
