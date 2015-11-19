@@ -1,7 +1,7 @@
 couchdb-dump
 ========
 
-A command line tool that outputs all documents in a [CouchDB](http://couchdb.apache.org) database. Also included is a command line tool that takes that output as input and loads it back into a CouchDB database.
+A command line tool that outputs all documents (including any attachments) in a [CouchDB](http://couchdb.apache.org) database. Also included is a command line tool that takes that output as input and loads it back into a CouchDB database.
 
 Reading and writing the data is done via stdin and stdout, respectively. The output of `cdbdump` is a JSON document containing a "docs" array element which contains every document in the database. The `cdbload` command takes an input which is exactly the same as the output of `cdbdump` and writes every document in it into the target database.
 
@@ -49,9 +49,9 @@ If you execute the `cdbdump` command with no arguments or with --help, the follo
 
 The username and password, if supplied, will be used for authentication via [Basic Auth (RFC2617)](http://docs.couchdb.org/en/1.6.1/api/server/authn.html#api-auth-basic). Currently this is the only supported authentication method.
 
-If you want to constrain the documents exported to only those that belong to a [CouchDB View](http://docs.couchdb.org/en/1.6.1/couchapp/ddocs.html), you can pass the **-D** and **-v** options to specify the design document and view function name respectively. This wont work with view that reduce or do other fancy things.
+If you want to constrain the documents exported to only those that belong to a [CouchDB View](http://docs.couchdb.org/en/1.6.1/couchapp/ddocs.html), you can pass the **-D** and **-v** options to specify the design document and view function name respectively. This won't work with views that *reduce* or do other fancy things.
 
-The **-s** paramater for `cdbdump` is used as the third paramater to JSON.stringify() for the amount of white space to use if you want the output to be pretty-printed.
+The **-s** parameter for `cdbdump` is used as the third parameter to JSON.stringify() for the amount of white space to use if you want the output to be pretty-printed.
 
 ##### CouchDB revision fields
 By default, the `_rev` element of every document is stripped out of the output of `cdbdump`. This allows the list of documents to be used as input to `cdbload`. If the **-k** parameter is given to `cdbdump`, then the `_rev` elements will *not* be stripped out and this will cause CouchDB to be unable to easily load these documents through the `_bulk_docs` endpoint because every document will error with a mismatched revision message (assuming you are loading into an empty database). See [CouchDB _bulk_docs documentation](http://docs.couchdb.org/en/1.6.1/api/database/bulk-api.html#post--db-_bulk_docs) for more details and ways you can manipulate the `cdbdump` output to get around that in case you need to keep the `_rev` values in your dump.
@@ -97,6 +97,7 @@ Fork and PR. Thanks!!
 
 ## Release History
 
+* 2.1.0 Includes attachments as part of the dump. (Contributed by https://github.com/iddo)
 * 2.0.0 Using latest through2 package instead of through.
 * 1.2.0 Support for dumping only docs which belong to a specified CouchDB design doc and view.
 * 1.1.0 Added Authentication options
