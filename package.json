@@ -1,6 +1,6 @@
 {
   "name": "couchdb-dump",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Tools to dump, modify, and load documents in CouchDB from the command line. (Same basic concept as mysqldump, but much more and for CouchDB)",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
   "license": "Apache-2.0",

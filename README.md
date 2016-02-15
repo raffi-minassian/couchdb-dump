@@ -187,6 +187,7 @@ Fork and PR. Thanks!!
 
 ## Release History
 
+* 2.2.1 Minor cleanup.
 * 2.2.0 Provides the `cdbmorph` command that lets you manipulate the documents in the stream between `cdbdump` and `cdbload` using a function you provide.
 * 2.1.0 Includes attachments as part of the dump. (Contributed by https://github.com/iddo)
 * 2.0.0 Using latest through2 package instead of through.
