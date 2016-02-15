@@ -1,6 +1,6 @@
 {
   "name": "couchdb-dump",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Same basic concept as mysqldump, but for CouchDB",
   "author": "Raffi Minassian (https://twitter.com/RaffiMinassian)",
   "license": "Apache-2.0",
@@ -9,7 +9,8 @@
   },
   "bin": {
     "cdbdump": "./bin/cdbdump",
-    "cdbload": "./bin/cdbload"
+    "cdbload": "./bin/cdbload",
+    "cdbmorph": "./bin/cdbmorph"
   },
   "repository": {
     "type": "git",
