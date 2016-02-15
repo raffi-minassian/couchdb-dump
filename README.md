@@ -66,7 +66,7 @@ You can even put modified documents back into a CouchDB database by loading the 
 
 `cdbdump -k -d myhugedatabase | cdbmorph -f ./morph.js | cdbload -d myhugedatabase`
 
-*NOTE: This is not magic and it is not "real" in-place-updates so all the rules of CouchDB document updates with respect to **_rev** values, etc, still apply. Be mindful of this and other activity on the database if you do something like this. Also, be sure to apply the **-k** flag on the `cdbdump` command so that the documents in the output will include their **_rev** values.*
+*NOTE: This is not magic and it is not "real" in-place-updates so all the rules of CouchDB document updates with respect to* **_rev** *values, etc, still apply. Be mindful of this and other activity on the database if you do something like this. Also, be sure to apply the* **-k** *flag on the `cdbdump` command so that the documents in the output will include their* **_rev** *values.*
 
 
 ## `cdbdump` Full Usage
