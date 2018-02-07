@@ -31,6 +31,7 @@
     "async": "^2.6.0",
     "jsonparse": "1.x.x",
     "minimist": "1.x.x",
+    "mkdirp": "^0.5.1",
     "request": "2.x.x",
     "request-promise": "^4.2.2",
     "request-promise-native": "^1.0.5",
